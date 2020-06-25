@@ -60,6 +60,17 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 category = "main"
+description = "Django Admin Extensions"
+name = "django-admin"
+optional = false
+python-versions = "*"
+version = "2.0.1"
+
+[package.dependencies]
+django-excel-response2 = ">=3.0.0"
+
+[[package]]
+category = "main"
 description = "A configurable set of panels that display various debug information about the current request/response."
 name = "django-debug-toolbar"
 optional = false
@@ -77,6 +88,31 @@ name = "django-environ"
 optional = false
 python-versions = "*"
 version = "0.4.5"
+
+[[package]]
+category = "main"
+description = "Django Excel Base"
+name = "django-excel-base"
+optional = false
+python-versions = "*"
+version = "1.0.4"
+
+[package.dependencies]
+pytz = "*"
+screen = "*"
+xlwt = "*"
+
+[[package]]
+category = "main"
+description = "A function extends of Tarken's django-excel-response"
+name = "django-excel-response2"
+optional = false
+python-versions = "*"
+version = "3.0.2"
+
+[package.dependencies]
+django-excel-base = ">=1.0.4"
+django-six = ">=1.0.4"
 
 [[package]]
 category = "main"
@@ -99,6 +135,14 @@ version = "2.3.0"
 
 [package.dependencies]
 Django = ">=2.2"
+
+[[package]]
+category = "main"
+description = "Django-six —— Django Compatibility Library"
+name = "django-six"
+optional = false
+python-versions = "*"
+version = "1.0.4"
 
 [[package]]
 category = "main"
@@ -231,6 +275,14 @@ version = "2020.1"
 
 [[package]]
 category = "main"
+description = "Screen width and so on"
+name = "screen"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[[package]]
+category = "main"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -267,6 +319,14 @@ watchdog = ["watchdog"]
 
 [[package]]
 category = "main"
+description = "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"
+name = "xlwt"
+optional = false
+python-versions = "*"
+version = "1.3.0"
+
+[[package]]
+category = "main"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 marker = "python_version < \"3.8\""
 name = "zipp"
@@ -279,7 +339,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "32d711265ecbed18ddd4e6dc98b180bbce73017374bc83e0f3257b36db17f1ba"
+content-hash = "59803f1d308867c821c2b7b7aa12716c8caac1f4630d6ded35b6c9d9ef9defa3"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -303,6 +363,10 @@ django = [
     {file = "Django-3.0.7-py3-none-any.whl", hash = "sha256:e1630333248c9b3d4e38f02093a26f1e07b271ca896d73097457996e0fae12e8"},
     {file = "Django-3.0.7.tar.gz", hash = "sha256:5052b34b34b3425233c682e0e11d658fd6efd587d11335a0203d827224ada8f2"},
 ]
+django-admin = [
+    {file = "django-admin-2.0.1.tar.gz", hash = "sha256:5c39d7a7614853425c11da2d9293748b104fe587f32bda2dd7ef56ab9ed7e61c"},
+    {file = "django_admin-2.0.1-py2.py3-none-any.whl", hash = "sha256:63cfeb0d367488eb790b4a455dc9a5a64cc25f60060296c6d6e7fc0835c30cac"},
+]
 django-debug-toolbar = [
     {file = "django-debug-toolbar-2.2.tar.gz", hash = "sha256:eabbefe89881bbe4ca7c980ff102e3c35c8e8ad6eb725041f538988f2f39a943"},
     {file = "django_debug_toolbar-2.2-py3-none-any.whl", hash = "sha256:ff94725e7aae74b133d0599b9bf89bd4eb8f5d2c964106e61d11750228c8774c"},
@@ -311,6 +375,14 @@ django-environ = [
     {file = "django-environ-0.4.5.tar.gz", hash = "sha256:6c9d87660142608f63ec7d5ce5564c49b603ea8ff25da595fd6098f6dc82afde"},
     {file = "django_environ-0.4.5-py2.py3-none-any.whl", hash = "sha256:c57b3c11ec1f319d9474e3e5a79134f40174b17c7cc024bbb2fad84646b120c4"},
 ]
+django-excel-base = [
+    {file = "django-excel-base-1.0.4.tar.gz", hash = "sha256:6f125ff049e706d36a84aff867be0db1d4e3ec837ed61be13e7488fa005269c6"},
+    {file = "django_excel_base-1.0.4-py2.py3-none-any.whl", hash = "sha256:654712990425bcd5f206b867a1e859d5e40c3aa624f901a129a0b3d3cb96fc29"},
+]
+django-excel-response2 = [
+    {file = "django-excel-response2-3.0.2.tar.gz", hash = "sha256:05eade79a5129beefcec4f3f90cd5d7c2540d028f70e788faa39adb50a458e9a"},
+    {file = "django_excel_response2-3.0.2-py2.py3-none-any.whl", hash = "sha256:864ba614fa42a749fde0079eee1a31525ed68ffa82d683fd933d179e71b12f6d"},
+]
 django-extensions = [
     {file = "django-extensions-2.2.9.tar.gz", hash = "sha256:2f81b618ba4d1b0e58603e25012e5c74f88a4b706e0022a3b21f24f0322a6ce6"},
     {file = "django_extensions-2.2.9-py2.py3-none-any.whl", hash = "sha256:b19182d101a441fe001c5753553a901e2ef3ff60e8fbbe38881eb4a61fdd17c4"},
@@ -318,6 +390,10 @@ django-extensions = [
 django-filter = [
     {file = "django-filter-2.3.0.tar.gz", hash = "sha256:11e63dd759835d9ba7a763926ffb2662cf8a6dcb4c7971a95064de34dbc7e5af"},
     {file = "django_filter-2.3.0-py3-none-any.whl", hash = "sha256:616848eab6fc50193a1b3730140c49b60c57a3eda1f7fc57fa8505ac156c6c75"},
+]
+django-six = [
+    {file = "django-six-1.0.4.tar.gz", hash = "sha256:b05c96f5a7dbdcf9b513748df27421e8d63e586399bac80a928a29d97d78d450"},
+    {file = "django_six-1.0.4-py2.py3-none-any.whl", hash = "sha256:d307483f3591fa3b471a3724659710229ea3127e112499f2b6f7fa7faa1e27e4"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
@@ -359,6 +435,10 @@ pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},
     {file = "pytz-2020.1.tar.gz", hash = "sha256:c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"},
 ]
+screen = [
+    {file = "screen-1.0.1-cp27-cp27m-macosx_10_9_intel.whl", hash = "sha256:29009e0306d005679cc43c8cd69856a046265433310c10e71920591de3c58fda"},
+    {file = "screen-1.0.1.tar.gz", hash = "sha256:aebfe90de7b8a646d4f3c2b214bd6ffa2ab12ed9d0b14c08620d9c7f7b8ee670"},
+]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
@@ -374,6 +454,10 @@ wcwidth = [
 werkzeug = [
     {file = "Werkzeug-1.0.1-py2.py3-none-any.whl", hash = "sha256:2de2a5db0baeae7b2d2664949077c2ac63fbd16d98da0ff71837f7d1dea3fd43"},
     {file = "Werkzeug-1.0.1.tar.gz", hash = "sha256:6c80b1e5ad3665290ea39320b91e1be1e0d5f60652b964a3070216de83d2e47c"},
+]
+xlwt = [
+    {file = "xlwt-1.3.0-py2.py3-none-any.whl", hash = "sha256:a082260524678ba48a297d922cc385f58278b8aa68741596a87de01a9c628b2e"},
+    {file = "xlwt-1.3.0.tar.gz", hash = "sha256:c59912717a9b28f1a3c2a98fd60741014b06b043936dcecbc113eaaada156c88"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},
