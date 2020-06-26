@@ -18,6 +18,7 @@ from django.conf import settings
 from django.urls import include, path
 from api import views as api_views
 from rest_framework import routers
+from rest_framework.authtoken import views as authtoken_views
 
 router = routers.DefaultRouter()
 router.register('users', api_views.UserViewSet)
@@ -26,8 +27,9 @@ router.register('notes', api_views.NoteViewSet, basename='note')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('djoser.urls')),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('api/auth/', include('djoser.urls')),
+    path('api/auth/', include('djoser.urls.authtoken')),
 ]
 
 if settings.DEBUG:
