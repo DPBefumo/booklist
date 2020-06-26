@@ -2,7 +2,8 @@ from django.shortcuts import render
 from rest_framework import viewsets, permissions
 from .serializers import UserSerializer, NoteSerializer, BookSerializer
 from .models import User, Note, Book, get_available_books_for_user
-from django_filters.rest_framework import DjangoFilterBackend
+from django_filters.rest_framework import DjangoFilterBackend, OrderingFilter
+from rest_framework import filters
 
 # Create your views here.
 
@@ -25,3 +26,5 @@ class BookViewSet(viewsets.ModelViewSet):
 class NoteViewSet(viewsets.ModelViewSet):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['time_stamp']
